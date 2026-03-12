@@ -21,11 +21,9 @@
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;cursor:none;transition:background .35s,color .35s}
 
-    /* CURSOR */
     #cur{width:10px;height:10px;background:var(--fg);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;opacity:0;transform:translate(-50%,-50%);transition:opacity .3s,transform .15s,background .2s}
     #ring{width:34px;height:34px;border:1.5px solid var(--fg);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;opacity:0;transform:translate(-50%,-50%);transition:opacity .3s,border-color .2s}
 
-    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;background:var(--bg);border-bottom:1px solid var(--border);z-index:100;opacity:0;animation:fadeDown .6s ease .2s forwards;transition:background .35s,border-color .35s}
     nav ul{list-style:none;display:flex;gap:2.5rem}
     nav ul a{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fg2);text-decoration:none;transition:color .2s}
@@ -38,7 +36,6 @@
     [data-theme="dark"] #themeBtn .sun{opacity:0;transform:scale(.4) rotate(30deg)}
     [data-theme="dark"] #themeBtn .moon{opacity:1;transform:scale(1) rotate(0deg)}
 
-    /* HERO */
     #hero{min-height:100vh;display:flex;align-items:center;padding:8rem 4rem 4rem;max-width:100%}
     .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;width:100%;max-width:1200px;margin:0 auto}
     .hero-left{opacity:0;animation:fadeUp .8s ease .4s forwards}
@@ -55,7 +52,6 @@
     .btn-o{border:1px solid var(--border);color:var(--fg2)}
     .btn-o:hover{border-color:var(--fg);color:var(--fg)}
 
-    /* TERMINAL */
     .terminal{background:var(--accent);border-radius:8px;width:100%;max-width:460px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.15)}
     .t-bar{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.08)}
     .dot{width:10px;height:10px;border-radius:50%}
@@ -65,7 +61,6 @@
     .tp{color:#28c840}.to{color:rgba(255,255,255,.5)}.tv{color:#febc2e}.tr{color:#ff5f57}
     .blink{display:inline-block;width:8px;height:1em;background:#28c840;vertical-align:middle;animation:blink 1s step-end infinite}
 
-    /* SECTIONS */
     .sec{padding:6rem 4rem;max-width:1200px;margin:0 auto}
     .sec-full{padding:6rem 0}
     .sec-full .inner{max-width:1200px;margin:0 auto;padding:0 4rem}
@@ -73,7 +68,6 @@
     .sec-num{font-family:var(--mono);font-size:.75rem;color:var(--red);letter-spacing:.1em}
     h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;letter-spacing:-.02em}
 
-    /* SOBRE MI */
     .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:start}
     .about-text p{color:var(--fg2);line-height:1.8;margin-bottom:1.2rem;font-size:1.02rem}
     .about-text p strong{color:var(--fg);font-weight:500}
@@ -83,7 +77,6 @@
     .stat-n{font-family:var(--mono);font-size:1.8rem;font-weight:500;color:var(--fg);line-height:1;margin-bottom:.25rem}
     .stat-l{font-size:.82rem;color:var(--fg2);font-family:var(--mono);letter-spacing:.05em}
 
-    /* HABILIDADES */
     .skills-bg{background:var(--bg2);transition:background .35s}
     .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
     .skill-card{padding:2rem;border:1px solid var(--border);background:var(--bg);transition:all .2s;position:relative;overflow:hidden}
@@ -96,7 +89,6 @@
     .sk-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
     .tag{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em;padding:.2rem .6rem;background:var(--bg2);border:1px solid var(--border);color:var(--fg2);transition:background .35s,border-color .35s}
 
-    /* PROYECTOS */
     .proj-list{display:flex;flex-direction:column;border:1px solid var(--border);transition:border-color .35s}
     .proj-item{display:grid;grid-template-columns:auto 1fr auto auto;gap:2rem;align-items:center;padding:2rem 2.5rem;background:var(--bg);border-bottom:1px solid var(--border);transition:background .2s,border-color .35s}
     .proj-item:last-child{border-bottom:none}
@@ -112,7 +104,6 @@
     .proj-arrow{font-size:1.2rem;color:var(--border);transition:color .2s,transform .2s}
     .proj-item:hover .proj-arrow{color:var(--fg);transform:translateX(4px)}
 
-    /* CONTACTO - fondo siempre oscuro fijo */
     .contact-bg{background:#111110}
     .contact-bg .sec-hdr{border-color:rgba(255,255,255,.1)}
     .contact-bg .sec-num{color:#ff5f57}
@@ -125,18 +116,15 @@
     .clink:hover{border-color:rgba(255,255,255,.4);color:#fff;transform:translateX(4px)}
     .clink-icon{font-size:1.1rem;min-width:1.5rem;text-align:center}
 
-    /* FOOTER - también fijo oscuro */
     footer{background:#111110;border-top:1px solid rgba(255,255,255,.08);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center}
     footer p{font-family:var(--mono);font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.05em}
 
-    /* ANIMATIONS */
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
     @keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
     .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
-    /* RESPONSIVE */
     @media(max-width:900px){
       nav{padding:1.2rem 2rem}
       #hero{padding:7rem 2rem 4rem}
@@ -174,7 +162,7 @@
       </svg>
     </button>
     <ul>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#sobre-mi">Sobre mi</a></li>
       <li><a href="#habilidades">Skills</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -185,10 +173,10 @@
     <div class="hero-grid">
       <div class="hero-left">
         <div class="hero-tag">Disponible para nuevas oportunidades</div>
-        <h1>Pau<br/>Cámara<br/><em>Security</em></h1>
-        <p class="hero-desc">Estudiante del Máster CETI de Ciberseguridad en Monlau. Apasionado por el hacking ético, la defensa activa y los entornos SOC.</p>
+        <h1>Pau<br/>Camara<br/><em>Security</em></h1>
+        <p class="hero-desc">Estudiante del Master CETI de Ciberseguridad en Monlau. Apasionado por el hacking etico, la defensa activa y los entornos SOC.</p>
         <div class="hero-ctas">
-          <a href="#proyectos" class="btn btn-p">Ver proyectos →</a>
+          <a href="#proyectos" class="btn btn-p">Ver proyectos</a>
           <a href="#contacto" class="btn btn-o">Contactar</a>
         </div>
       </div>
@@ -199,17 +187,17 @@
             <span class="t-title">pau@kali ~</span>
           </div>
           <div class="t-body">
-            <div class="tl"><span class="tp">❯ </span>whoami</div>
-            <div class="tl to">Pau Cámara — Cybersecurity Analyst</div>
+            <div class="tl"><span class="tp">&#10095; </span>whoami</div>
+            <div class="tl to">Pau Camara -- Cybersecurity Analyst</div>
             <div class="tl">&nbsp;</div>
-            <div class="tl"><span class="tp">❯ </span>cat status.json</div>
+            <div class="tl"><span class="tp">&#10095; </span>cat status.json</div>
             <div class="tl to">{</div>
             <div class="tl">&nbsp;&nbsp;<span class="tv">"rol"</span><span class="to">: </span><span class="tv">"SOC Analyst (aspirant)"</span><span class="to">,</span></div>
-            <div class="tl">&nbsp;&nbsp;<span class="tv">"formacion"</span><span class="to">: </span><span class="tv">"Máster CETI · Monlau"</span><span class="to">,</span></div>
+            <div class="tl">&nbsp;&nbsp;<span class="tv">"formacion"</span><span class="to">: </span><span class="tv">"Master CETI - Monlau"</span><span class="to">,</span></div>
             <div class="tl">&nbsp;&nbsp;<span class="tv">"htb"</span><span class="to">: </span><span class="tv">"Active"</span><span class="to">,</span></div>
             <div class="tl">&nbsp;&nbsp;<span class="tv">"open_to_work"</span><span class="to">: </span><span class="tr">true</span></div>
             <div class="tl to">}</div>
-            <div class="tl"><span class="tp">❯ </span><span class="blink"></span></div>
+            <div class="tl"><span class="tp">&#10095; </span><span class="blink"></span></div>
           </div>
         </div>
       </div>
@@ -217,18 +205,18 @@
   </section>
 
   <section id="sobre-mi" class="sec">
-    <div class="sec-hdr reveal"><span class="sec-num">01</span><h2>Sobre mí</h2></div>
+    <div class="sec-hdr reveal"><span class="sec-num">01</span><h2>Sobre mi</h2></div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Soy <strong>Pau Cámara</strong>, estudiante del <strong>Máster CETI de Ciberseguridad en Monlau</strong> (Barcelona). Mi objetivo es desarrollarme como analista de ciberseguridad, con especial interés en operaciones SOC, detección de amenazas y análisis forense.</p>
-        <p>Participo activamente en plataformas como <strong>HackTheBox</strong> y <strong>TryHackMe</strong>, donde pongo a prueba mis conocimientos en entornos reales de hacking ético y resuelvo retos de explotación web, escalada de privilegios y Active Directory.</p>
-        <p>Fuera de las plataformas, trabajo en proyectos propios: desde el desarrollo de herramientas ofensivas hasta la construcción de laboratorios de monitorización. Creo que entender cómo ataca un adversario es fundamental para defender bien.</p>
+        <p>Soy <strong>Pau Camara</strong>, estudiante del <strong>Master CETI de Ciberseguridad en Monlau</strong> (Barcelona). Mi objetivo es desarrollarme como analista de ciberseguridad, con especial interes en operaciones SOC, deteccion de amenazas y analisis forense.</p>
+        <p>Participo activamente en plataformas como <strong>HackTheBox</strong> y <strong>TryHackMe</strong>, donde pongo a prueba mis conocimientos en entornos reales de hacking etico y resuelvo retos de explotacion web, escalada de privilegios y Active Directory.</p>
+        <p>Fuera de las plataformas, trabajo en proyectos propios: desde el desarrollo de herramientas ofensivas hasta la construccion de laboratorios de monitorizacion. Creo que entender como ataca un adversario es fundamental para defender bien.</p>
       </div>
       <div class="stats reveal">
-        <div class="stat"><div class="stat-n">HTB</div><div class="stat-l">HackTheBox · Activo</div></div>
-        <div class="stat"><div class="stat-n">THM</div><div class="stat-l">TryHackMe · Activo</div></div>
-        <div class="stat"><div class="stat-n">CETI</div><div class="stat-l">Máster Ciberseguridad · Monlau</div></div>
-        <div class="stat"><div class="stat-n">BCN</div><div class="stat-l">Barcelona, España</div></div>
+        <div class="stat"><div class="stat-n">HTB</div><div class="stat-l">HackTheBox - Activo</div></div>
+        <div class="stat"><div class="stat-n">THM</div><div class="stat-l">TryHackMe - Activo</div></div>
+        <div class="stat"><div class="stat-n">CETI</div><div class="stat-l">Master Ciberseguridad - Monlau</div></div>
+        <div class="stat"><div class="stat-n">BCN</div><div class="stat-l">Barcelona, Espana</div></div>
       </div>
     </div>
   </section>
@@ -238,39 +226,39 @@
       <div class="sec-hdr reveal"><span class="sec-num">02</span><h2>Habilidades</h2></div>
       <div class="skills-grid">
         <div class="skill-card reveal">
-          <div class="sk-icon">🔍</div>
+          <div class="sk-icon">&#128269;</div>
           <div class="sk-name">Pentesting &amp; Ethical Hacking</div>
-          <div class="sk-desc">Explotación de vulnerabilidades, enumeración y post-explotación en entornos controlados.</div>
+          <div class="sk-desc">Explotacion de vulnerabilidades, enumeracion y post-explotacion en entornos controlados.</div>
           <div class="sk-tags"><span class="tag">Kali Linux</span><span class="tag">Feroxbuster</span><span class="tag">Burp Suite</span><span class="tag">Nmap</span></div>
         </div>
         <div class="skill-card reveal">
-          <div class="sk-icon">📡</div>
-          <div class="sk-name">Análisis de Red</div>
-          <div class="sk-desc">Captura e inspección de tráfico, detección de anomalías y análisis de protocolos.</div>
+          <div class="sk-icon">&#128225;</div>
+          <div class="sk-name">Analisis de Red</div>
+          <div class="sk-desc">Captura e inspeccion de trafico, deteccion de anomalias y analisis de protocolos.</div>
           <div class="sk-tags"><span class="tag">Wireshark</span><span class="tag">tcpdump</span><span class="tag">Netflow</span></div>
         </div>
         <div class="skill-card reveal">
-          <div class="sk-icon">🛡️</div>
+          <div class="sk-icon">&#128737;</div>
           <div class="sk-name">SIEM &amp; SOC</div>
-          <div class="sk-desc">Monitorización de eventos, correlación de alertas y respuesta a incidentes.</div>
+          <div class="sk-desc">Monitorizacion de eventos, correlacion de alertas y respuesta a incidentes.</div>
           <div class="sk-tags"><span class="tag">Wazuh</span><span class="tag">Splunk</span><span class="tag">SPL</span><span class="tag">SIEM</span></div>
         </div>
         <div class="skill-card reveal">
-          <div class="sk-icon">⚙️</div>
+          <div class="sk-icon">&#9881;</div>
           <div class="sk-name">Desarrollo de Herramientas</div>
-          <div class="sk-desc">Creación de utilidades ofensivas y scripts de automatización para tareas de seguridad.</div>
-          <div class="sk-tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">Bash</span></div>
+          <div class="sk-desc">Creacion de utilidades ofensivas y scripts de automatizacion para tareas de seguridad.</div>
+          <div class="sk-tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">PS1</span></div>
         </div>
         <div class="skill-card reveal">
-          <div class="sk-icon">🐳</div>
-          <div class="sk-name">Virtualización &amp; Labs</div>
+          <div class="sk-icon">&#128051;</div>
+          <div class="sk-name">Virtualizacion &amp; Labs</div>
           <div class="sk-desc">Despliegue de entornos de prueba aislados para emular infraestructuras reales.</div>
           <div class="sk-tags"><span class="tag">Docker</span><span class="tag">Proxmox</span><span class="tag">VMware</span><span class="tag">VirtualBox</span></div>
         </div>
         <div class="skill-card reveal">
-          <div class="sk-icon">🧠</div>
+          <div class="sk-icon">&#129504;</div>
           <div class="sk-name">CTF &amp; Threat Hunting</div>
-          <div class="sk-desc">Resolución activa de retos en HTB y THM, análisis de IOCs y TTPs del adversario.</div>
+          <div class="sk-desc">Resolucion activa de retos en HTB y THM, analisis de IOCs y TTPs del adversario.</div>
           <div class="sk-tags"><span class="tag">Privilege Escalation</span><span class="tag">Rev. Shells</span><span class="tag">MITRE ATT&amp;CK</span></div>
         </div>
       </div>
@@ -284,28 +272,28 @@
         <div class="proj-num">01</div>
         <div>
           <div class="proj-name">HackTheBox &amp; TryHackMe</div>
-          <div class="proj-desc">Participación activa en plataformas CTF. Resolución de máquinas centradas en explotación web, escalada de privilegios y Active Directory.</div>
+          <div class="proj-desc">Participacion activa en plataformas CTF. Resolucion de maquinas centradas en explotacion web, escalada de privilegios y Active Directory.</div>
         </div>
         <div class="proj-meta"><span class="badge b-active">Activo</span></div>
-        <div class="proj-arrow">→</div>
+        <div class="proj-arrow">&#8594;</div>
       </div>
       <div class="proj-item">
         <div class="proj-num">02</div>
         <div>
           <div class="proj-name">C2 Framework en Go</div>
-          <div class="proj-desc">Desarrollo desde cero de un Command &amp; Control en Go para comprender técnicas de comunicación encubierta, evasión de EDR y gestión de agentes. Actualmente trabajando también en un dashboard de control con HTML, CSS y JS.</div>
+          <div class="proj-desc">Desarrollo desde cero de un Command &amp; Control en Go para comprender tecnicas de comunicacion encubierta, evasion de EDR y gestion de agentes. Actualmente trabajando tambien en un dashboard de control con HTML, CSS y JS.</div>
         </div>
         <div class="proj-meta"><span class="badge b-wip">En desarrollo</span></div>
-        <div class="proj-arrow">→</div>
+        <div class="proj-arrow">&#8594;</div>
       </div>
       <div class="proj-item">
         <div class="proj-num">03</div>
         <div>
-          <div class="proj-name">Home Lab SOC · Wazuh / Splunk</div>
-          <div class="proj-desc">Laboratorio doméstico con Docker para simular un entorno SOC real: ingesta de logs, reglas de detección y análisis de alertas con Wazuh o Splunk Enterprise.</div>
+          <div class="proj-name">Home Lab SOC - Wazuh / Splunk</div>
+          <div class="proj-desc">Laboratorio domestico con Docker para simular un entorno SOC real: ingesta de logs, reglas de deteccion y analisis de alertas con Wazuh o Splunk Enterprise.</div>
         </div>
         <div class="proj-meta"><span class="badge b-pending">Pendiente</span></div>
-        <div class="proj-arrow">→</div>
+        <div class="proj-arrow">&#8594;</div>
       </div>
     </div>
   </section>
@@ -315,57 +303,55 @@
       <div class="sec-hdr reveal"><span class="sec-num">04</span><h2>Contacto</h2></div>
       <div class="contact-grid">
         <div class="contact-txt reveal">
-          <p>Estoy buscando mi <strong>primera oportunidad profesional</strong> en el mundo de la ciberseguridad. Si tienes un proyecto interesante, una beca o una posición en tu equipo SOC, estaré encantado de hablar.</p>
-          <p style="margin-top:1.2rem">También abierto a colaborar en proyectos open source, CTF teams o cualquier iniciativa relacionada con la seguridad ofensiva o defensiva.</p>
+          <p>Estoy buscando mi <strong>primera oportunidad profesional</strong> en el mundo de la ciberseguridad. Si tienes un proyecto interesante, una beca o una posicion en tu equipo SOC, estare encantado de hablar.</p>
+          <p style="margin-top:1.2rem">Tambien abierto a colaborar en proyectos open source, CTF teams o cualquier iniciativa relacionada con la seguridad ofensiva o defensiva.</p>
         </div>
         <div class="contact-links reveal">
-          <a href="/cdn-cgi/l/email-protection#96e6f7e3f5f7fbf7e4f7a6a7b0b5a0a2adf1fbf7fffab8f5f9fb" class="clink"><span class="clink-icon">✉</span>paucamara01&#64;gmail.com</a>
+          <a href="mailto:paucamara01@gmail.com" class="clink"><span class="clink-icon">&#9993;</span>paucamara01@gmail.com</a>
           <a href="https://www.linkedin.com/in/paucamara/" target="_blank" rel="noopener" class="clink"><span class="clink-icon">in</span>linkedin.com/in/paucamara</a>
-          <a href="https://app.hackthebox.com/users/2253378" target="_blank" rel="noopener" class="clink"><span class="clink-icon">⬡</span>HackTheBox Profile</a>
-          <a href="https://tryhackme.com/p/nigiriidesalmon" target="_blank" rel="noopener" class="clink"><span class="clink-icon">⚑</span>TryHackMe Profile</a>
+          <a href="https://app.hackthebox.com/users/2253378" target="_blank" rel="noopener" class="clink"><span class="clink-icon">&#11041;</span>HackTheBox Profile</a>
+          <a href="https://tryhackme.com/p/nigiriidesalmon" target="_blank" rel="noopener" class="clink"><span class="clink-icon">&#9873;</span>TryHackMe Profile</a>
         </div>
       </div>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Pau Cámara · Todos los derechos reservados</p>
-    <p>Barcelona, España</p>
+    <p>2025 Pau Camara - Todos los derechos reservados</p>
+    <p>Barcelona, Espana</p>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // THEME
-    const html = document.documentElement;
-    const btn  = document.getElementById('themeBtn');
+  <script>
+    var html = document.documentElement;
+    var btn = document.getElementById('themeBtn');
     if (localStorage.getItem('theme') === 'dark') html.setAttribute('data-theme','dark');
-    btn.addEventListener('click', () => {
-      const dark = html.getAttribute('data-theme') === 'dark';
+    btn.addEventListener('click', function() {
+      var dark = html.getAttribute('data-theme') === 'dark';
       html.setAttribute('data-theme', dark ? 'light' : 'dark');
       localStorage.setItem('theme', dark ? 'light' : 'dark');
     });
 
-    // CURSOR
-    const cur  = document.getElementById('cur');
-    const ring = document.getElementById('ring');
-    let mx = 0, my = 0, rx = 0, ry = 0, active = false;
+    var cur = document.getElementById('cur');
+    var ring = document.getElementById('ring');
+    var mx = 0, my = 0, rx = 0, ry = 0, active = false;
 
     function cursorColor() {
-      const els = document.elementsFromPoint(mx, my);
-      const onDark = els.some(el => el.closest('.contact-bg, footer'));
-      const lightMode = html.getAttribute('data-theme') !== 'dark';
-      const col = (onDark && lightMode) ? '#f0efe9' : 'var(--fg)';
-      cur.style.background    = col;
-      ring.style.borderColor  = col;
+      var els = document.elementsFromPoint(mx, my);
+      var onDark = els.some(function(el) { return el.closest('.contact-bg, footer'); });
+      var lightMode = html.getAttribute('data-theme') !== 'dark';
+      var col = (onDark && lightMode) ? '#f0efe9' : 'var(--fg)';
+      cur.style.background = col;
+      ring.style.borderColor = col;
     }
 
-    document.addEventListener('mousemove', e => {
+    document.addEventListener('mousemove', function(e) {
       mx = e.clientX; my = e.clientY;
       cur.style.left = mx + 'px';
-      cur.style.top  = my + 'px';
+      cur.style.top = my + 'px';
       cursorColor();
       if (!active) {
         active = true;
-        cur.style.opacity  = '1';
+        cur.style.opacity = '1';
         ring.style.opacity = '0.4';
       }
     });
@@ -374,32 +360,35 @@
       rx += (mx - rx) * 0.13;
       ry += (my - ry) * 0.13;
       ring.style.left = rx + 'px';
-      ring.style.top  = ry + 'px';
+      ring.style.top = ry + 'px';
       requestAnimationFrame(loop);
     })();
 
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => {
+    document.querySelectorAll('a, button').forEach(function(el) {
+      el.addEventListener('mouseenter', function() {
         cur.style.transform = 'translate(-50%,-50%) scale(2.5)';
-        ring.style.opacity  = '0.15';
+        ring.style.opacity = '0.15';
       });
-      el.addEventListener('mouseleave', () => {
+      el.addEventListener('mouseleave', function() {
         cur.style.transform = 'translate(-50%,-50%) scale(1)';
-        ring.style.opacity  = active ? '0.4' : '0';
+        ring.style.opacity = active ? '0.4' : '0';
       });
     });
 
-    // SCROLL REVEAL
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach((e, i) => {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e, i) {
         if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 90);
+          setTimeout(function() { e.target.classList.add('visible'); }, i * 90);
           obs.unobserve(e.target);
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 
-    // TERMINAL STAGGER
-    document.querySelectorAll('.tl').forEach((l, i) => {
-      l.style.
+    document.querySelectorAll('.tl').forEach(function(l, i) {
+      l.style.opacity = '0';
+      setTimeout(function() { l.style.transition = 'opacity 0.25s'; l.style.opacity = '1'; }, 900 + i * 150);
+    });
+  </script>
+</body>
+</html>
