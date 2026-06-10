@@ -96,6 +96,8 @@
     .proj-num{font-family:var(--mono);font-size:.75rem;color:var(--red);min-width:2rem}
     .proj-name{font-weight:600;font-size:1.05rem;margin-bottom:.35rem}
     .proj-desc{font-size:.9rem;color:var(--fg2);line-height:1.5}
+    .proj-desc a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--border);transition:border-color .2s,color .2s}
+    .proj-desc a:hover{color:var(--red);border-color:var(--red)}
     .proj-meta{display:flex;align-items:flex-end}
     .badge{font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;padding:.25rem .7rem;border-radius:2px;white-space:nowrap}
     .b-active{background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9}
@@ -137,8 +139,13 @@
       footer{padding:1.5rem 2rem;flex-direction:column;gap:.5rem;text-align:center}
     }
     @media(max-width:600px){
+      nav{padding:1rem;gap:1rem}
+      nav ul{gap:1rem;overflow-x:auto;white-space:nowrap}
+      nav ul a{font-size:.68rem}
       .skills-grid{grid-template-columns:1fr}
-      .proj-item{grid-template-columns:auto 1fr auto}
+      .proj-item{display:block;padding:1.5rem}
+      .proj-num{margin-bottom:.75rem}
+      .proj-arrow{display:none}
       .proj-meta{display:none}
     }
   </style>
@@ -174,7 +181,7 @@
       <div class="hero-left">
         <div class="hero-tag">Disponible para nuevas oportunidades</div>
         <h1>Pau<br/>Camara<br/><em>Security</em></h1>
-        <p class="hero-desc">Estudiante del Master CETI de Ciberseguridad en Monlau. Apasionado por el hacking etico, la defensa activa y los entornos SOC.</p>
+        <p class="hero-desc">Analista SOC N1 junior con Master CETI finalizado en Monlau. Interesado en monitorizacion, deteccion de amenazas, analisis de logs y laboratorios de ciberseguridad.</p>
         <div class="hero-ctas">
           <a href="#proyectos" class="btn btn-p">Ver proyectos</a>
           <a href="#contacto" class="btn btn-o">Contactar</a>
@@ -192,8 +199,8 @@
             <div class="tl">&nbsp;</div>
             <div class="tl"><span class="tp">&#10095; </span>cat status.json</div>
             <div class="tl to">{</div>
-            <div class="tl">&nbsp;&nbsp;<span class="tv">"rol"</span><span class="to">: </span><span class="tv">"SOC Analyst (aspirant)"</span><span class="to">,</span></div>
-            <div class="tl">&nbsp;&nbsp;<span class="tv">"formacion"</span><span class="to">: </span><span class="tv">"Master CETI - Monlau"</span><span class="to">,</span></div>
+            <div class="tl">&nbsp;&nbsp;<span class="tv">"rol"</span><span class="to">: </span><span class="tv">"SOC Analyst N1 Junior"</span><span class="to">,</span></div>
+            <div class="tl">&nbsp;&nbsp;<span class="tv">"formacion"</span><span class="to">: </span><span class="tv">"Master CETI completado"</span><span class="to">,</span></div>
             <div class="tl">&nbsp;&nbsp;<span class="tv">"htb"</span><span class="to">: </span><span class="tv">"Active"</span><span class="to">,</span></div>
             <div class="tl">&nbsp;&nbsp;<span class="tv">"open_to_work"</span><span class="to">: </span><span class="tr">true</span></div>
             <div class="tl to">}</div>
@@ -208,14 +215,14 @@
     <div class="sec-hdr reveal"><span class="sec-num">01</span><h2>Sobre mi</h2></div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Soy <strong>Pau Camara</strong>, estudiante del <strong>Master CETI de Ciberseguridad en Monlau</strong> (Barcelona). Mi objetivo es desarrollarme como analista de ciberseguridad, con especial interes en operaciones SOC, deteccion de amenazas y analisis forense.</p>
+        <p>Soy <strong>Pau Camara</strong>, tecnico ASIR con perfil de ciberseguridad y <strong>Master CETI de Ciberseguridad en Monlau</strong> finalizado en junio de 2026. Mi objetivo es desarrollarme como analista SOC N1, con especial interes en monitorizacion, triage de alertas, deteccion de amenazas y analisis de logs.</p>
         <p>Participo activamente en plataformas como <strong>HackTheBox</strong> y <strong>TryHackMe</strong>, donde pongo a prueba mis conocimientos en entornos reales de hacking etico y resuelvo retos de explotacion web, escalada de privilegios y Active Directory.</p>
-        <p>Fuera de las plataformas, trabajo en proyectos propios: desde el desarrollo de herramientas ofensivas hasta la construccion de laboratorios de monitorizacion. Creo que entender como ataca un adversario es fundamental para defender bien.</p>
+        <p>Fuera de las plataformas, trabajo en proyectos propios como <strong>Nightshade</strong> y laboratorios SOC con Wazuh/Splunk. Me interesa entender el comportamiento ofensivo para documentar evidencias, mejorar detecciones y escalar incidentes con criterio.</p>
       </div>
       <div class="stats reveal">
         <div class="stat"><div class="stat-n">HTB</div><div class="stat-l">HackTheBox - Activo</div></div>
         <div class="stat"><div class="stat-n">THM</div><div class="stat-l">TryHackMe - Activo</div></div>
-        <div class="stat"><div class="stat-n">CETI</div><div class="stat-l">Master Ciberseguridad - Monlau</div></div>
+        <div class="stat"><div class="stat-n">CETI</div><div class="stat-l">Master finalizado - Monlau</div></div>
         <div class="stat"><div class="stat-n">BCN</div><div class="stat-l">Barcelona, Espana</div></div>
       </div>
     </div>
@@ -245,9 +252,9 @@
         </div>
         <div class="skill-card reveal">
           <div class="sk-icon">&#9881;</div>
-          <div class="sk-name">Desarrollo de Herramientas</div>
-          <div class="sk-desc">Creacion de utilidades ofensivas y scripts de automatizacion para tareas de seguridad.</div>
-          <div class="sk-tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">PS1</span></div>
+          <div class="sk-name">Desarrollo en Go &amp; Automatizacion</div>
+          <div class="sk-desc">Desarrollo de herramientas de laboratorio en Go e integraciones de automatizacion aplicadas a proyectos de seguridad.</div>
+          <div class="sk-tags"><span class="tag">Go</span><span class="tag">n8n</span><span class="tag">Qdrant</span><span class="tag">HTML/CSS/JS</span></div>
         </div>
         <div class="skill-card reveal">
           <div class="sk-icon">&#128051;</div>
@@ -271,28 +278,28 @@
       <div class="proj-item">
         <div class="proj-num">01</div>
         <div>
-          <div class="proj-name">HackTheBox &amp; TryHackMe</div>
-          <div class="proj-desc">Participacion activa en plataformas CTF. Resolucion de maquinas centradas en explotacion web, escalada de privilegios y Active Directory.</div>
+          <div class="proj-name">Nightshade - C2 Framework</div>
+          <div class="proj-desc">Trabajo final del Master CETI: C2 funcional en Go con panel web, integracion de IA mediante n8n y base de datos vectorial Qdrant para asistencia contextual y automatizacion. Web: <a href="https://nightshade.es" target="_blank" rel="noopener">nightshade.es</a>.</div>
         </div>
-        <div class="proj-meta"><span class="badge b-active">Activo</span></div>
-        <div class="proj-arrow">&#8594;</div>
+        <div class="proj-meta"><span class="badge b-active">TFC Monlau</span></div>
+        <a href="https://nightshade.es" target="_blank" rel="noopener" class="proj-arrow" aria-label="Abrir Nightshade">&#8594;</a>
       </div>
       <div class="proj-item">
         <div class="proj-num">02</div>
         <div>
-          <div class="proj-name">C2 Framework en Go</div>
-          <div class="proj-desc">Desarrollo desde cero de un Command &amp; Control en Go para comprender tecnicas de comunicacion encubierta, evasion de EDR y gestion de agentes. Actualmente trabajando tambien en un dashboard de control con HTML, CSS y JS.</div>
+          <div class="proj-name">Home Lab SOC - Wazuh / Splunk</div>
+          <div class="proj-desc">Laboratorio domestico con Docker para simular un entorno SOC: ingesta de logs, reglas de deteccion, busquedas SPL y analisis de alertas con Wazuh/Splunk.</div>
         </div>
-        <div class="proj-meta"><span class="badge b-wip">En desarrollo</span></div>
+        <div class="proj-meta"><span class="badge b-wip">En progreso</span></div>
         <div class="proj-arrow">&#8594;</div>
       </div>
       <div class="proj-item">
         <div class="proj-num">03</div>
         <div>
-          <div class="proj-name">Home Lab SOC - Wazuh / Splunk</div>
-          <div class="proj-desc">Laboratorio domestico con Docker para simular un entorno SOC real: ingesta de logs, reglas de deteccion y analisis de alertas con Wazuh o Splunk Enterprise.</div>
+          <div class="proj-name">HackTheBox &amp; TryHackMe</div>
+          <div class="proj-desc">Entrenamiento continuo en plataformas CTF: explotacion web, PrivEsc Linux/Windows, Active Directory y SOC Analyst Path.</div>
         </div>
-        <div class="proj-meta"><span class="badge b-pending">Pendiente</span></div>
+        <div class="proj-meta"><span class="badge b-active">Activo</span></div>
         <div class="proj-arrow">&#8594;</div>
       </div>
     </div>
@@ -303,7 +310,7 @@
       <div class="sec-hdr reveal"><span class="sec-num">04</span><h2>Contacto</h2></div>
       <div class="contact-grid">
         <div class="contact-txt reveal">
-          <p>Estoy buscando mi <strong>primera oportunidad profesional</strong> en el mundo de la ciberseguridad. Si tienes un proyecto interesante, una beca o una posicion en tu equipo SOC, estare encantado de hablar.</p>
+          <p>Estoy buscando mi <strong>primera oportunidad profesional como Analista SOC N1</strong>. Si tienes una posicion junior, una beca o un equipo de operaciones de seguridad donde pueda aportar y seguir aprendiendo, estare encantado de hablar.</p>
           <p style="margin-top:1.2rem">Tambien abierto a colaborar en proyectos open source, CTF teams o cualquier iniciativa relacionada con la seguridad ofensiva o defensiva.</p>
         </div>
         <div class="contact-links reveal">
@@ -317,7 +324,7 @@
   </div>
 
   <footer>
-    <p>2025 Pau Camara - Todos los derechos reservados</p>
+    <p>2026 Pau Camara - Todos los derechos reservados</p>
     <p>Barcelona, Espana</p>
   </footer>
 
